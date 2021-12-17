@@ -1,0 +1,184 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+/* fonts and color */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+/* font-family: 'Barlow Condensed', sans-serif;  400 700    heading  buttons and nav */
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+/* font-family: 'Barlow', sans-serif; 400 */
+
+:root{
+    --Red: hsl(0, 100%, 68%);
+    --Very-Dark-Blue: hsl(230, 29%, 20%);
+    --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+    --Grayish-Blue: hsl(231, 7%, 65%);
+    --Light-Grayish-Blue: hsl(207, 33%, 95%);
+}
+body{
+    font-family: 'Barlow', sans-serif;
+}
+h1,h2,nav,button{
+    font-family: 'Barlow Condensed', sans-serif
+}
+/* utility */
+.container{
+    width: 1200px;
+    max-width:90%;
+    margin: auto;
+}
+
+/*  nav-bar*/
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    margin-top: 20px;
+    padding: 40px 0px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+nav ul li a{
+    text-decoration: none;
+    margin-left: 20px;
+    color: var(--Very-Dark-Blue);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+nav ul li a:hover{
+    border-bottom: 1px solid var(--Very-Dark-Blue);
+}
+nav .hamburger{
+    display: none;
+}
+/* section1 */
+.section1{
+    margin:100px auto;
+}
+.header .section1{
+    display: flex;
+}
+.header .section1>div{
+    flex: 1;
+}
+.header .section1 img{
+    width: 130%;
+}
+.section1 span.new{
+    padding: 4px 10px;
+    background-color:var(--Very-Dark-Blue);
+    color: #fff;
+    border-radius: 15px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    
+}
+.section1 p.p1{
+    color: var(--Dark-Grayish-Blue);
+}
+.section1 .fixme{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    
+}
+.section1 .fixme p{
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+.section1 .text-container h1{
+    text-transform: uppercase;
+    color: var(--Very-Dark-Blue);
+    font-size: 45px;
+    font-weight:800;
+    margin-bottom: 20px;
+}
+.section1 .text-container p.bottom{
+    color: var(--Dark-Grayish-Blue);
+    margin-bottom: 20px;
+}
+.section1 .text-container .button{
+    display: flex;
+    align-items: center;
+}
+.section1 .text-container .button button{
+    margin-right: 30px;
+    padding: 10px 20px;
+    border-radius:4px;
+    outline: none;
+    border: none;
+    background-color:var(--Red);
+    color: #fff;
+    font-weight:700;
+    font-family: 'Barlow Condensed', sans-serif;   
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.section1 .text-container .button button:hover{
+    opacity: 0.8;
+}
+nav .close{
+    display: none;
+}
+.buttonp{
+    color: var(--Dark-Grayish-Blue);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing:4px;
+    font-size: 12px;
+}
+@media screen and (max-width:768px) {
+    nav .hamburger{
+        display: block;
+    }
+    nav ul{
+        display: none;
+        width: 100%;
+    }
+    .show{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin-bottom: 20px;
+        padding: 10px 40px;
+        background-color: grey;
+    }
+    .show li a{
+        padding: 20px;
+    }
+    .header .section1{
+        flex-direction: column-reverse;
+    }
+    .section1 .text-container{
+        margin-top:100px;
+    }
+    .section1 .text-container h1{
+        font-size: 30px;
+    }
+    .section1 .text-container p ,.section1 .text-container  p.bottom{
+        color: var(--Grayish-Blue);
+    }
+    .section1 .text-container .button button{
+        font-size: 14px;
+        padding: 20px 20px;
+    }
+    .section1 .text-container .button p{
+        letter-spacing:1px;
+        font-size: 14px;
+    }
+    .section1 .text-container .fixme p.p1{
+        letter-spacing:2px;
+    }
+    .section1 .text-container p.bottom{
+        font-size: 20px;
+        line-height:1.4;
+    }
+}
